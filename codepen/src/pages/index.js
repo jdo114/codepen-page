@@ -14,32 +14,22 @@ const FlexCon = styled.div`
 font-family: "PT Sans Caption", sans-serif;
 display: flex;
 flex-direction: column;
+
 align-items: center;
 justify-content: center;
 text-align: center;
-font-size: 1.5rem;
 margin: 0;
-
+padding: 0;
 `
-
-const RowFlex = styled.div`
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: center;
-width: 30rem;
-
-`
-
-const Title = styled.h1`
-color: rgb(17, 17, 17);
-font-size: 2.2em;
-margin: 0.67em 0px;
-
-`;
-
-
 const Pix = styled.div`
+display: flex;
+margin: 0 auto;
+
+
+`
+const Pix1 = styled.div`
+display: flex;
+margin: 0 auto;
 `
 
 const Icons = styled.div`
@@ -47,34 +37,45 @@ display:flex;
 flex-direction: row;
 `
 
- const Image = styled.img`
-  height: 100%;
-  width: 100%;
-
-  margin:0;
-  padding: 0px;
- `
-
+ const Image = styled.img` 
+ display: flex;
  
+  height: 100%;
+  width: 100%;  
+  padding: 0px;
+  margin-top: -8%;
+  margin-bottom: 0;
+ `
 const Image2 = styled.img`
+display:flex;
 height: 100%;
 width: 100%;
 padding:0px;
-margin: 0;
+margin-top: 0;
+  margin-bottom: 0;
+`
+
+
+const Button = styled.button`
+  position:relative;
+  bottom: 10rem;
+ width:500%;
+ height:500%;
+  padding: 0;
 
 `
 
 const Pstyle = styled.p`
+position: relative;
 @import url('https://fonts.googleapis.com/css?family=Courgette');
 font-family: 'Courgette', cursive;
-
 display: flex;
 -webkit-box-align: center;
 align-items: center;
 flex-direction: column;
 text-align: center;
-position: absolute;
-    top: 105%;
+
+    top: -10rem;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -85,15 +86,19 @@ color:white;
 const IndexPage = () => (
   <Layout>
 <FlexCon>
-  
+    
           <Image src={icon} alt='this is an image' />
-  
-    <Pix>
+          <Pix>
+          <Button>Button</Button>
+    </Pix>
+    
           <Image src={icon2} alt='this is an image' />
+          <Pix>
           <Pstyle>Creating a timeless look,
              coupled <br></br> with a flawless
               moment. </Pstyle>
-  </Pix>
+              </Pix>
+  
   <Icons>
   <FaPhoneSquare/><FaFacebook/><FaInstagram/>
   </Icons>
