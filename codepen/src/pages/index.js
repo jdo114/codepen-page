@@ -6,7 +6,7 @@ import icon2 from '../images/bottom.jpg'
 import Layout from '../components/layout'
 import styled from 'styled-components'
 
-import {FaBeer,FaPhoneSquare,FaFacebook,FaInstagram} from 'react-icons/fa'
+import {FaBeer,Fa,FaRegEnvelopeOpen,FaEnvelopeSquare,FaPhoneSquare,FaFacebook,FaInstagram, FaEnvelopeOpen} from 'react-icons/fa'
 
 
 const FlexCon = styled.div`
@@ -35,6 +35,11 @@ margin: 0 auto;
 const Icons = styled.div`
 display:flex;
 flex-direction: row;
+font-size:50px;
+align-content:center;
+width: 100%;
+    padding: 1rem;
+    margin: .5rem 1rem;
 `
 
  const Image = styled.img` 
@@ -57,10 +62,11 @@ margin-top: 0;
 
 
 const Button = styled.button`
-  position:relative;
-  bottom: 10rem;
- width:500%;
- height:500%;
+  position:absolute;
+  top:  20%;
+  right: 40%;
+  width:23%;
+  height:4%;
   padding: 0;
 
 `
@@ -86,9 +92,9 @@ color:white;
 const IndexPage = () => (
   <Layout>
 <FlexCon>
-    
+    <Pix>
           <Image src={icon} alt='this is an image' />
-          <Pix>
+          
           <Button>Button</Button>
     </Pix>
     
@@ -100,7 +106,7 @@ const IndexPage = () => (
               </Pix>
   
   <Icons>
-  <FaPhoneSquare/><FaFacebook/><FaInstagram/>
+  <FaPhoneSquare/><FaFacebook/><FaInstagram/><FaRegEnvelopeOpen/>
   </Icons>
 </FlexCon>
   </Layout>
