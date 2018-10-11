@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import icon from '../images/top.jpg'
 import icon2 from '../images/bottom.jpg'
-
+import icon3 from '../images/logo.png'
 import Layout from '../components/layout'
 import styled from 'styled-components'
 
@@ -24,7 +24,8 @@ padding: 0;
 const Pix = styled.div`
 display: flex;
 margin: 0 auto;
-
+flex-direction: column;
+box-sizing: content-box;    
 
 `
 const Pix1 = styled.div`
@@ -33,13 +34,20 @@ margin: 0 auto;
 `
 
 const Icons = styled.div`
-display:flex;
+
+display:inline-block;
 flex-direction: row;
-font-size:50px;
+position:absolute;
+top:65%;
+flex-direction: row;
+font-size:40px;
 align-content:center;
 width: 100%;
-    padding: 1rem;
-    margin: .5rem 1rem;
+
+    padding: 0rem;
+
+    margin: 0rem 0rem;
+    
 `
 
  const Image = styled.img` 
@@ -56,8 +64,23 @@ display:flex;
 height: 100%;
 width: 100%;
 padding:0px;
-margin-top: 0;
+margin-top: -1;
   margin-bottom: 0;
+`
+const Logodiv = styled.nav`
+height:20%;
+padding:1px;
+`
+const Logo = styled.img` 
+display: flex;
+position:absolute;
+height : 5%;
+ left: 4%;
+ top: 0%;
+ width: 15%;  
+ padding: 0px;
+ margin-top: 0rem;
+ margin-bottom: 0;
 `
 
 
@@ -92,22 +115,28 @@ color:white;
 const IndexPage = () => (
   <Layout>
 <FlexCon>
-    <Pix>
-          <Image src={icon} alt='this is an image' />
-          
-          <Button>Button</Button>
-    </Pix>
-    
-          <Image src={icon2} alt='this is an image' />
-          <Pix>
-          <Pstyle>Creating a timeless look,
-             coupled <br></br> with a flawless
-              moment. </Pstyle>
-              </Pix>
   
-  <Icons>
-  <FaPhoneSquare/><FaFacebook/><FaInstagram/><FaRegEnvelopeOpen/>
-  </Icons>
+  <Logodiv>
+    
+   <Logo src={icon3} alt='this is an image' />
+</Logodiv>
+       
+          <Image src={icon} alt='this is an image' />
+           
+         <Button>Button</Button>
+   
+    <Pix>
+
+
+      
+      <Image src={icon2} alt='this is an image' />
+   <Pstyle>Creating a timeless look,
+           coupled <br></br> with a flawless
+            moment. </Pstyle>
+          <Icons>       
+            <FaPhoneSquare/><FaFacebook/> <FaInstagram/>  <FaRegEnvelopeOpen/>
+          </Icons>
+ </Pix>
 </FlexCon>
   </Layout>
 )
